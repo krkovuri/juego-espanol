@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: blue;
+  background-color: #003366;
 }
 
 p,
@@ -15,13 +15,17 @@ h1 {
 
 .box {
   border: 4px solid gold;
-  height: 90vh;
-  width: 90vw;
+  padding: 20px;
+  border-radius: 20px;
+  height: auto;
+  width: 80vw;
+  max-width: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  background-color: #004080;
 }
 
 .gamename,
@@ -30,71 +34,50 @@ h1 {
 }
 
 .gamename {
-  font-size: 8rem;
+  font-size: 6rem;
+  margin: 0;
 }
 
 .extra {
-  font-size: 2.5rem;
-  margin-top: 3.5vh;
+  font-size: 2rem;
+  margin-top: 3rem 0;
 }
 
 .bien {
-  margin-bottom: 3.5vh;
+  margin-bottom: 3rem;
+  margin-top: 0;
 }
 
 .play-button {
-  padding: 20px 100px;
+  padding: 20px 50px;
   border: 4px solid gold;
   background-color: #04aa6d;
   cursor: pointer;
   font-family: "Allerta", sans-serif;
-  border-radius: 50%;
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .play-button:hover {
   background-color: #3e8e41;
-}
-
-@media (max-width: 1200px) {
-  .box {
-    width: 80vw;
-  }
-  .gamename {
-    font-size: 6rem;
-  }
-  .extra {
-    font-size: 2rem;
-    margin-top: 3vh;
-  }
-  .play-button {
-    padding: 15px 75px;
-    font-size: 1.5rem;
-  }
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-  .box {
-    width: 90vw;
-    height: 70vh;
-  }
   .gamename {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .extra {
     font-size: 1.5rem;
     margin-top: 2vh;
   }
   .play-button {
-    padding: 12px 60px;
-    font-size: 1.2rem;
+    padding: 15px 40px;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .box {
-    width: 95vw;
-    height: 60vh;
-  }
   .gamename {
     font-size: 3rem;
   }
@@ -103,7 +86,7 @@ h1 {
     margin-top: 1vh;
   }
   .play-button {
-    padding: 10px 50px;
-    font-size: 1rem;
+    padding: 10px 30px;
+    font-size: 1.2rem;
   }
 }
