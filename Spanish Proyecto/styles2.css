@@ -1,0 +1,157 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-size: 16px;
+}
+
+.board {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  gap: 0.5vw;
+}
+
+.cat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0.5vw;
+  margin-top: 0px;
+  gap: 1.5vh;
+}
+
+.cat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  box-sizing: border-box;
+
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  text-align: center;
+  font-size: 4.5rem;
+  color: #ebbe00;
+  cursor: pointer;
+}
+
+.cat-title,
+.square {
+  height: 15vh;
+  width: 15vw;
+  background-color: #00003d;
+  box-shadow: 10px 10px 10px rgba(0, 0, 200, 0.4);
+}
+
+div > h1 {
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  text-align: center;
+  font-size: 2rem;
+  color: #7498ff;
+}
+
+.square:hover {
+  background-color: #001f7f;
+  border: 3px solid #ebbe00;
+}
+
+.teams {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2vw;
+  height: 4.3vh;
+  width: 30vw;
+  bottom: 1.7vh;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 28vw;
+  background-color: white;
+  border: 0.3vh solid #ebbe00;
+  padding: 0 1vw;
+
+  font-size: 1rem;
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+}
+
+.tname {
+  display: inline-block;
+}
+
+.score {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clicked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  box-sizing: border-box;
+
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  text-align: center;
+  font-size: 4.5rem;
+  color: #ccc;
+  background-color: #444;
+  box-shadow: 10px 10px 10px #444;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+.reset-btn {
+  position: fixed;
+  background-color: #405cf5;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
+}
+
+.add-pts,
+.sub-pts {
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+.add-pts {
+  background-color: rgb(81, 255, 28);
+}
+
+.sub-pts {
+  background-color: rgb(243, 68, 68);
+}

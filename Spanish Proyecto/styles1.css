@@ -1,0 +1,109 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: blue;
+}
+
+p,
+h1 {
+  color: #ffffff;
+}
+
+.box {
+  border: 4px solid gold;
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.gamename,
+.extra {
+  font-family: "Allerta", sans-serif;
+}
+
+.gamename {
+  font-size: 8rem;
+}
+
+.extra {
+  font-size: 2.5rem;
+  margin-top: 3.5vh;
+}
+
+.bien {
+  margin-bottom: 3.5vh;
+}
+
+.play-button {
+  padding: 20px 100px;
+  border: 4px solid gold;
+  background-color: #04aa6d;
+  cursor: pointer;
+  font-family: "Allerta", sans-serif;
+  border-radius: 50%;
+}
+
+.play-button:hover {
+  background-color: #3e8e41;
+}
+
+@media (max-width: 1200px) {
+  .box {
+    width: 80vw;
+  }
+  .gamename {
+    font-size: 6rem;
+  }
+  .extra {
+    font-size: 2rem;
+    margin-top: 3vh;
+  }
+  .play-button {
+    padding: 15px 75px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 90vw;
+    height: 70vh;
+  }
+  .gamename {
+    font-size: 5rem;
+  }
+  .extra {
+    font-size: 1.5rem;
+    margin-top: 2vh;
+  }
+  .play-button {
+    padding: 12px 60px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 95vw;
+    height: 60vh;
+  }
+  .gamename {
+    font-size: 3rem;
+  }
+  .extra {
+    font-size: 1rem;
+    margin-top: 1vh;
+  }
+  .play-button {
+    padding: 10px 50px;
+    font-size: 1rem;
+  }
+}
