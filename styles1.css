@@ -26,11 +26,14 @@ h1 {
   flex-direction: column;
   text-align: center;
   background-color: #004080;
+  gap: 2rem;
 }
 
 .gamename,
 .extra {
   font-family: "Allerta", sans-serif;
+  margin: 0rem;
+  font-size: 2rem;
 }
 
 .gamename {
@@ -38,14 +41,12 @@ h1 {
   margin: 0;
 }
 
-.extra {
-  font-size: 2rem;
-  margin-top: 3rem 0;
+.bien {
+  margin-top: 1rem;
 }
 
-.bien {
-  margin-bottom: 3rem;
-  margin-top: 0;
+.extra {
+  margin-bottom: 1rem;
 }
 
 .play-button {
