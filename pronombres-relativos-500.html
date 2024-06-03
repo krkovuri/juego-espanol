@@ -23,6 +23,22 @@
       <button class="enter">Show answer!</button>
       <h1><span class="answer"></span></h1>
       <button onclick="history.go(-1)" class="back">Back to Board (esc)</button>
+      <button class="show-modal hidden">Click here to play a game!</button>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1 class="msg">Games to keep you motivated!</h1>
+        <a href="minesweeper.html">
+          <button class="minesweeper">Minesweeper</button>
+        </a>
+        <a href="pingpong.html">
+          <button class="pingpong">Ping Pong</button>
+        </a>
+        <a href="whacamole.html">
+          <button class="whacamole">Whack-A-Mole</button>
+        </a>
+      </div>
+      <div class="overlay hidden"></div>
     </div>
   </body>
 </html>

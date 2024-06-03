@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   const questions = {
-    // imperfect tense questions
     "imperfect-100": {
       name: "Imperfect Tense for $100",
       question:
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Imperfect Tense for $300",
       question:
         "Sus pies le _____ todos los días después de caminar tanto (doler)",
-      answer: "dolía",
+      answer: "dolían",
     },
     "imperfect-400": {
       name: "Imperfect Tense for $400",
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
         'Translate the sentence "We used to not like going to the dentist or the doctor" into Spanish.',
       answer: "A nosotros no nos gustaba ir al dentista o el doctor.",
     },
-    // adverb questions
     "adverbs-100": {
       name: "Adverbs for $100",
       question: "Explain how you form an adverb from an adjective in Spanish.",
@@ -63,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Use 3 different adverbs to describe how you would behave if you were feeling mareado/a.",
       answer: "Lentamente, cuidadosamente, despacio",
     },
-    // por vs para questions
     "por-para-100": {
       name: "Por vs Para for $100",
       question: "Fui a la farmacia _____ comprar las aspirinas.",
@@ -90,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
       question: "Cuando conducía _____ la autopista, vi un accidente.",
       answer: "por",
     },
-    // mandatos formales questions
     "mandatos-formales-100": {
       name: "Formal Commands for $100",
       question:
@@ -116,9 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Formal Commands for $500",
       question:
         "Give 3 formal commands that your doctor would say to you during a regular checkup.",
-      answer: "Abre la boca, levante el brazo, y respire hondo.",
+      answer: "Abra la boca, levante el brazo, y respire hondo.",
     },
-    // constructions with se questions
     "se-constructions-100": {
       name: "Constructions with se for $100",
       question:
@@ -146,9 +141,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "se-constructions-500": {
       name: "Constructions with se for $500",
       question: "Translate the sentence 'We damaged the radio' into Spanish.",
-      answer: "Se nos daño el radio.",
+      answer: "Se nos dañó el radio.",
     },
-    // relative pronouns questions
     "pronombres-relativos-100": {
       name: "Relative Pronouns for $100",
       question:
@@ -178,10 +172,11 @@ document.addEventListener("DOMContentLoaded", function () {
     "pronombres-relativos-500": {
       name: "Relative Pronouns for $500",
       question:
-        "Translate the sentence 'What I like about you is your generocity' into Spanish.",
+        "Translate the sentence 'What I like about you is your generosity' into Spanish.",
       answer: "Lo que me gusta de ti es tu generosidad.",
     },
   };
+
   const mainDiv = document.querySelector(".question-page");
   const id = mainDiv.id;
 
@@ -195,12 +190,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   answerElement.classList.add("hidden");
 
+  // modal stuff
+  const modal = document.querySelector(".modal");
+  const overlay = document.querySelector(".overlay");
+  const btnOpenModal = document.querySelector(".show-modal");
+  const btnCloseModal = document.querySelector(".close-modal");
+
+  const openModal = function () {
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+  };
+
+  const closeModal = function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+  };
+
+  btnOpenModal.addEventListener("click", openModal);
+  btnCloseModal.addEventListener("click", closeModal);
+  overlay.addEventListener("click", closeModal);
+
   document.querySelector(".enter").addEventListener("click", function () {
     answerElement.classList.remove("hidden");
+    btnOpenModal.classList.remove("hidden");
+  });
+
+  document.querySelector(".back").addEventListener("click", function () {
+    answerElement.classList.add("hidden");
+    btnOpenModal.classList.add("hidden");
   });
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      closeModal();
+    } else if (e.key === "Escape" && modal.classList.contains("hidden")) {
       history.back();
     }
   });

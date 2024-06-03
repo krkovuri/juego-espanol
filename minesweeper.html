@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minesweeper</title>
-    <link rel="stylesheet" href="minesweeper.css">
-</head>
-<body>
+    <link rel="stylesheet" href="minesweeper.css" />
+  </head>
+  <body>
     <div id="game-container">
-        <div id="status">
-            <span id="mines-count">Mines: 0</span>
-            <span id="flags-count">Flags: 0</span>
-            <span id="score-count">Score: 0</span>
-        </div>
-        <div id="controls">
-            <button onclick="setDifficulty('easy')">Easy</button>
-            <button onclick="setDifficulty('medium')">Medium</button>
-            <button onclick="setDifficulty('hard')">Hard</button>
-        </div>
-        <div id="game-board"></div>
+      <div id="status">
+        <span id="mines-count">Mines: 0</span>
+        <span id="flags-count">Flags: 0</span>
+        <span id="score-count">Score: 0</span>
+      </div>
+      <div id="controls">
+        <button onclick="setDifficulty('easy')">Easy</button>
+        <button onclick="setDifficulty('medium')">Medium</button>
+        <button onclick="setDifficulty('hard')">Hard</button>
+      </div>
+      <div id="game-board"></div>
     </div>
     <script src="minesweeper.js"></script>
-</body>
+  </body>
 </html>
